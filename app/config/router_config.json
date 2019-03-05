@@ -1,0 +1,31 @@
+{
+  "Led":{
+    "name":"Led Router",
+    "filePath":"./app/iot/app/router/tempsensor_router.js",
+    "switch":1
+  },
+
+  "Temp sensor":{
+    "name":"Temp sensor Router",
+    "filePath":"./app/iot/app/router/led_router.js",
+    "switch":1
+  },
+  "History":{
+    "name":"History Router",
+    "filePath":"./app/iot/app/router/history_router.js",
+    "switch":1
+  },
+  "Devicelist":{
+    "name":"Devicelist Router",
+    "filePath":"./app/iot/app/router/devicelist_router.js",
+    "switch":1
+  },
+  "Building":{
+    "name":"Building Router",
+    "filePath":"./app/iot/app/router/building_router.js",
+    "switch":1
+  }
+
+
+
+}

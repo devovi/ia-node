@@ -1,0 +1,5 @@
+{
+  "databaseFilePath":"./database.js",
+  "routersFilePath":"./routers.js",
+  "enableCORS":1
+}
