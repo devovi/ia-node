@@ -8,7 +8,7 @@ tempsensorRouter = function(app){
   .post(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const createtempsensorController=require('../tempsensor/controller/create_tempsensor_contr.js');
+    const createtempsensorController=require('../../tempsensor/controller/create_tempsensor_contr.js');
     createtempsensorController.create_tempsensor_contr_fn(req, res);
   });
 
@@ -17,7 +17,7 @@ tempsensorRouter = function(app){
   .get(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const checkExiststempsensorController =require('../tempsensor/controller/checkexists_tempsensor_contr.js');
+    const checkExiststempsensorController =require('../../tempsensor/controller/checkexists_tempsensor_contr.js');
     checkExiststempsensorController.checkexists_tempsensor_contr_fn(req, res);
   });
 
@@ -25,7 +25,7 @@ tempsensorRouter = function(app){
   .delete(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const deletetempsensorController=require('../tempsensor/controller/delete_tempsensor_contr.js');
+    const deletetempsensorController=require('../../tempsensor/controller/delete_tempsensor_contr.js');
     deletetempsensorController.delete_tempsensor_contr_fn(req, res);
   });
 
@@ -33,7 +33,7 @@ tempsensorRouter = function(app){
   app.route('/tempsensor/findall')
   .get(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
-      const findAlltempsensorController=require('../tempsensor/controller/findall_tempsensor_contr.js');
+      const findAlltempsensorController=require('../../tempsensor/controller/findall_tempsensor_contr.js');
     findAlltempsensorController.findall_tempsensor_contr_fn(req, res);
   });
 
@@ -42,7 +42,7 @@ tempsensorRouter = function(app){
   .get(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const findByIDtempsensorController =require('../tempsensor/controller/findbyid_tempsensor_contr.js');
+    const findByIDtempsensorController =require('../../tempsensor/controller/findbyid_tempsensor_contr.js');
     findByIDtempsensorController.findbyid_tempsensor_contr_fn(req, res);
   });
 
@@ -51,7 +51,7 @@ tempsensorRouter = function(app){
   .get(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const searchtempsensorController=require('../tempsensor/controller/search_tempsensor_contr.js');
+    const searchtempsensorController=require('../../tempsensor/controller/search_tempsensor_contr.js');
     searchtempsensorController.search_tempsensor_contr_fn(req, res);
   });
 
@@ -60,7 +60,7 @@ tempsensorRouter = function(app){
   .patch(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const updatetempsensorController=require('../tempsensor/controller/update_tempsensor_contr.js');
+    const updatetempsensorController=require('../../tempsensor/controller/update_tempsensor_contr.js');
     updatetempsensorController.update_tempsensor_contr_fn(req, res);
   });
 
@@ -68,7 +68,7 @@ tempsensorRouter = function(app){
   .get(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const findtempsensorController=require('../tempsensor/controller/find_tempsensor_contr.js');
+    const findtempsensorController=require('../../tempsensor/controller/find_tempsensor_contr.js');
     findtempsensorController.find_tempsensor_contr_fn(req, res);
   });
 

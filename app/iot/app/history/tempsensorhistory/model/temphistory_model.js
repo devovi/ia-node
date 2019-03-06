@@ -3,7 +3,7 @@ const mongoosePaginate = require('mongoose-paginate');
 
 const temphistory = mongoose.Schema({
   tempname: { type: String, required: true },
-  mintemp: {type: String},
+  tempvalue: {type: String},
 },
 { timestamps:
   {

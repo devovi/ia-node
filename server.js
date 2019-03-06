@@ -6,7 +6,7 @@ const mongoose  = require('mongoose');
 const colors = require('colors');
 const cors = require('cors');
 // var led_router = require('./app/iot/app/ledhistory/ledhistory.js')
-var mqtt_router = require('./app/iot/app/history/mqttrouter.js')
+var mqtt_router = require('./app/iot/app/router/mqtt/mqttrouter.js')
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -105,7 +105,7 @@ fileSystem.readFile('./app/config/server_config.json','utf8',function(serverConf
       console.log(colors.yellow("CORS not enabled!"));
     }
 
-    const server  = app.listen(serverPortFile.parsed.SERVER_PORT, function(serverStartError){
+    const server  = app.listen(serverPortFile.parsed.HTTP_SERVER_PORT, function(serverStartError){
 
       var port = server.address().port;
 

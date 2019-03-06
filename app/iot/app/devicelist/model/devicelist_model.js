@@ -4,6 +4,7 @@ const mongoosePaginate = require('mongoose-paginate');
 const devicelist = mongoose.Schema({
 
   name: { type: String, required: true },
+  deleted:{type:Boolean}
 
 
 },
