@@ -5,8 +5,6 @@ devicelistRouter = function(app){
   //**************************** Collections ****************************
 
 
-
-
   // Fetches all data of collections
   app.route('/devicelist/findall')
   .get(function(req, res){

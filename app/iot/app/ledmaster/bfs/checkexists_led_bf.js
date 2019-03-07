@@ -18,8 +18,8 @@ exports.checkexists_led_bf_fn = function (req,result) {
 
   var businessLogicHandler = function businessLogic() {
     // console.log('Business Logic');
-    var findall_led_bo = require('../bo/checkexists_led_bo.js');
-    findall_led_bo.findall_led_bo_fn(req, function(boResult){
+    var checkexists_led_bo = require('../bo/checkexists_led_bo.js');
+    checkexists_led_bo.checkexists_led_bo_fn(req, function(boResult){
       result(boResult);
     });
     // eventEmitter.emit('controls');

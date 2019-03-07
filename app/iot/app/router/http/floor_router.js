@@ -1,4 +1,4 @@
-buildingRouter = function(app){
+floorRouter = function(app){
 
   const colors = require('colors');
 
@@ -6,21 +6,22 @@ buildingRouter = function(app){
 
 
   // Fetches all data of collections
-  app.route('/building/findall')
+  app.route('/floor/findall')
   .get(function(req, res){
+    console.log("in router");
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
-    const findAllbuildingController=require('../../building/controller/findall_building_contr.js');
-    findAllbuildingController.findall_building_contr_fn(req, res);
+    const findAllfloorController=require('../../floor/controller/findall_floor_contr.js');
+    findAllfloorController.findall_floor_contr_fn(req, res);
   });
 
 
   // Fetches data from collections by given ID
-  app.route('/building/findbyid')
+  app.route('/floor/findbyid')
   .get(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const findByIDbuildingController=require('../../building/controller/findbyid_building_contr.js');
-    findByIDbuildingController.findbyid_building_contr_fn(req, res);
+    const findByIDfloorController=require('../../floor/controller/findbyid_floor_contr.js');
+    findByIDfloorController.findbyid_floor_contr_fn(req, res);
   });
 
 
@@ -28,4 +29,4 @@ buildingRouter = function(app){
 ///////////////////////////////////////////////////////////
 }
 
-module.exports = buildingRouter;
+module.exports = floorRouter;

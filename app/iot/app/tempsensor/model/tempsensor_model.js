@@ -8,7 +8,7 @@ const tempsensor = mongoose.Schema({
   mintemp: {type: String,  required: true},
   maxtemp: {type: String,  required: true},
   deleted : {type: Boolean, default: false},
-  able:{type:String}
+  mode:{type:String}
 
 },
 { timestamps:

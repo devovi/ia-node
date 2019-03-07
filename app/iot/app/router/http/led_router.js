@@ -53,7 +53,7 @@ ledRouter = function(app){
   .get(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const findByIDledController=require('../../led/controller/findbyid_led_contr.js');
+    const findByIDledController=require('../../ledmaster/controller/findbyid_led_contr.js');
     findByIDledController.findbyid_led_contr_fn(req, res);
   });
 
