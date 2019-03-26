@@ -9,5 +9,12 @@ historyRouter=function(app){
     findAllledhistoryController.findall_led_history_contr_fn(req, res);
   });
 
+  app.route('/ledhistory/findallledname')
+  .get(function(req, res){
+    console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
+    const findAlllednamehistoryController=require('../../history/ledhistory/controller/findall_ledname_histroy_contr.js');
+    findAlllednamehistoryController.findallledname_contr_fn(req, res);
+  });
+
 }
 module.exports=historyRouter;

@@ -6,9 +6,10 @@ const led = mongoose.Schema({
   ledname: { type: String, required: true },
   color: {type: String,  required: true},
   brightness: {type: String},
+  buildingname: {type:String},
   deleted : {type: Boolean, default: false},
   currentstatus: {type: String},
-  floorid:{type:Number},
+  floorno:{type:String},
   deviceid:{type:String},
   mode:{type:String}
 

@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 ////////////////////
 
 const mqtt = require('mqtt')
-const client = mqtt.connect('mqtt://localhost:1883')
+const client = mqtt.connect('mqtt://192.168.0.5:1883')
 ///////////////////
 var state = 'off'
 var mqtt_data_routers = ''
@@ -27,7 +27,7 @@ client.on('connect', () => {
   client.subscribe('device/state')
 
   // Inform controllers that led is connected
-  // client.publish('device/connected', 'true')
+  // client.publish('device/state', 'true')
   console.log('+++++++++++++++++++++++++')
   console.log('Below Topics are subscribed')
   console.log('1.device/state')

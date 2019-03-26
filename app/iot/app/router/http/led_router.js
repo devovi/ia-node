@@ -27,7 +27,7 @@ ledRouter = function(app){
   .delete(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const deleteledController=require('../../led/controller/delete_led_contr.js');
+    const deleteledController=require('../../ledmaster/controller/delete_led_contr.js');
     deleteledController.delete_led_contr_fn(req, res);
   });
 
@@ -62,7 +62,7 @@ ledRouter = function(app){
   .get(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const searchledController=require('../../led/controller/search_led_contr.js');
+    const searchledController=require('../../ledmaster/controller/search_led_contr.js');
     searchledController.search_led_contr_fn(req, res);
   });
 
@@ -71,7 +71,7 @@ ledRouter = function(app){
   .patch(function(req, res){
     console.log(colors.bgBlue(req.method+" "+req.route.path+" "+res.statusCode));
 
-    const updateledController=require('../../led/controller/update_led_contr.js');
+    const updateledController=require('../../ledmaster/controller/update_led_contr.js');
     updateledController.update_led_contr_fn(req, res);
   });
 

@@ -8,10 +8,10 @@ exports.create_led_dao_fn = function(req, result){
     ledname: req.ledname,
     color: req.color,
     brightness: req.brightness,
-    deleted :  req.deleted,
+    deleted :  req.deleted || false,
     currentstatus: req.currentstatus,
     buildingname:req.buildingname,
-    floor:req.floor,
+    floorno:req.floorno,
     able:req.able
 
   })
